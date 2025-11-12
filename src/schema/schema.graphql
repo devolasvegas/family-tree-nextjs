@@ -3,7 +3,7 @@ type Person {
   givenName: String!
   familyName: String!
   label: String!
-  gender: String
+  gender: Gender
   dateOfBirth: String
   dateOfDeath: String
   birthLocation: String
@@ -11,6 +11,12 @@ type Person {
   notes: String
   createdBy: String
   createdAt: String
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHER
 }
 
 type User {
