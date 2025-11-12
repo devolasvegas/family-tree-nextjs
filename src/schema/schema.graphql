@@ -1,7 +1,8 @@
 type Person {
   id: ID!
-  firstName: String!
-  lastName: String!
+  givenName: String!
+  familyName: String!
+  label: String!
   gender: String
   dateOfBirth: String
   dateOfDeath: String
