@@ -1,0 +1,23 @@
+type Person {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  gender: String
+  dateOfBirth: String
+  dateOfDeath: String
+  birthLocation: String
+  deathLocation: String
+  notes: String
+  createdBy: String
+  createdAt: String
+}
+
+type User {
+  id: ID!
+  email: String!
+  createdAt: String!
+}
+
+type Query {
+  persons: [Person]
+}
