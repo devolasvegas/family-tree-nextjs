@@ -2,6 +2,8 @@ import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { readFileSync } from "fs";
 
+import "dotenv/config";
+
 import resolvers from "./schema/resolvers.js";
 
 const typeDefs = readFileSync("./src/schema/schema.graphql", {
