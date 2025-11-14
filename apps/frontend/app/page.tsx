@@ -3,17 +3,11 @@ import { gql } from "@apollo/client";
 
 import { query } from "@lib/apolloClient";
 
-// import {} from "@shared/dist/index.js";
+import { Person } from "@shared/types/person";
 
 // Using force-dynamic so that our GraqhQL query doesn't run at build time
 // We want to use Railway private networking which is not available at build time
 export const dynamic = "force-dynamic";
-
-interface Person {
-  id: string;
-  firstName: string;
-  lastName: string;
-}
 
 interface Data {
   persons: Person[];
