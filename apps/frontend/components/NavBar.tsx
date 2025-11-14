@@ -12,9 +12,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from "@components/ui/navigation-menu";
 
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@hooks/use-mobile";
 
 const components: { title: string; href: string; description: string }[] = [
   {

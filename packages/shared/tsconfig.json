@@ -3,7 +3,9 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",
-    "ignoreDeprecations": "6.0"
+    "module": "nodenext",
+
+    "ignoreDeprecations": "5.0"
   },
   "include": ["src"]
 }

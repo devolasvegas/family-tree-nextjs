@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { gql } from "@apollo/client";
 
-import { query } from "@/lib/apolloClient";
+import { query } from "@lib/apolloClient";
 
-import { Person, formatPersonName } from "@shared";
+// import { Person, formatPersonName } from "@shared";
 
 // Using force-dynamic so that our GraqhQL query doesn't run at build time
 // We want to use Railway private networking which is not available at build time

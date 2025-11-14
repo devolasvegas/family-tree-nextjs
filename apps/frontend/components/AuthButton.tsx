@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@components/ui/button";
 
-import userImagePlaceholder from "@/public/user-image-placeholder.svg";
+import userImagePlaceholder from "@public/user-image-placeholder.svg";
 
 const AuthButton = () => {
   const { data: session } = useSession();
