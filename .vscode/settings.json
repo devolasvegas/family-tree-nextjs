@@ -1,9 +1,0 @@
-{
-  "eslint.workingDirectories": [
-    { "directory": "apps/frontend" },
-    { "directory": "apps/backend" },
-    { "directory": "packages/shared" }
-  ],
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
-}
