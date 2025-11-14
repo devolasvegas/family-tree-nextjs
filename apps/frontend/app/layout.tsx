@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 
-import { NavBar } from "@/components/NavBar";
-import Logo from "@/components/Logo";
-import Footer from "@/components/Footer";
-import AuthButton from "@/components/AuthButton";
+import { NavBar } from "@components/NavBar";
+import Logo from "@components/Logo";
+import Footer from "@components/Footer";
+import AuthButton from "@components/AuthButton";
 
-import { ApolloWrapper } from "@/providers/ApolloWrapper";
-import { SessionWrapper } from "@/providers/SessionWrapper";
+import { ApolloWrapper } from "@providers/ApolloWrapper";
+import { SessionWrapper } from "@providers/SessionWrapper";
 
 import "./globals.css";
 

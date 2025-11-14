@@ -17,8 +17,12 @@
         "name": "next"
       }
     ],
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "*": ["./*"],
+      "@components/*": ["./components/*"],
+      "@providers/*": ["./providers/*"]
     }
   },
   "include": [
