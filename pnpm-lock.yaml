@@ -23,6 +23,9 @@ importers:
       '@apollo/server':
         specifier: ^5.1.0
         version: 5.1.0(graphql@16.12.0)
+      '@familytree/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
       dotenv:
         specifier: ^17.2.3
         version: 17.2.3
@@ -32,9 +35,6 @@ importers:
       pg:
         specifier: ^8.16.3
         version: 8.16.3
-      shared:
-        specifier: workspace:*
-        version: link:../../packages/shared
     devDependencies:
       '@types/node':
         specifier: ^24.10.0
@@ -48,6 +48,9 @@ importers:
       '@apollo/client-integration-nextjs':
         specifier: ^0.14.1
         version: 0.14.1(@apollo/client@4.0.9(graphql@16.12.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(rxjs@7.8.2))(@types/react@19.2.4)(graphql@16.12.0)(next@16.0.1(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(rxjs@7.8.2)
+      '@familytree/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
       '@radix-ui/react-navigation-menu':
         specifier: ^1.2.14
         version: 1.2.14(@types/react-dom@19.2.3(@types/react@19.2.4))(@types/react@19.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -84,9 +87,6 @@ importers:
       rxjs:
         specifier: ^7.8.2
         version: 7.8.2
-      shared:
-        specifier: workspace:*
-        version: link:../../packages/shared
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.4.0
