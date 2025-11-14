@@ -11,12 +11,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "zod": "^4.25.0"
+    "zod": "^4.1.12"
   },
   "devDependencies": {
-    "typescript": "^5.7.0",
-    "eslint": "^8.50.0",
-    "eslint-config-prettier": "^9.0.0",
-    "prettier": "^3.5.0"
+    "typescript": "^5.9.3"
   }
 }

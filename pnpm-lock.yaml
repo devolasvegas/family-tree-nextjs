@@ -29,6 +29,9 @@ importers:
       pg:
         specifier: ^8.16.3
         version: 8.16.3
+      shared:
+        specifier: workspace:*
+        version: link:../../packages/shared
     devDependencies:
       '@types/node':
         specifier: ^24.10.0
@@ -81,6 +84,9 @@ importers:
       rxjs:
         specifier: ^7.8.2
         version: 7.8.2
+      shared:
+        specifier: workspace:*
+        version: link:../../packages/shared
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.4.0
@@ -111,6 +117,16 @@ importers:
         version: 1.4.0
       typescript:
         specifier: ^5
+        version: 5.9.3
+
+  packages/shared:
+    dependencies:
+      zod:
+        specifier: ^4.1.12
+        version: 4.1.12
+    devDependencies:
+      typescript:
+        specifier: ^5.9.3
         version: 5.9.3
 
 packages:
