@@ -1,0 +1,78 @@
+type User {
+  id: ID!
+  email: String!
+  createdAt: String!
+}
+
+type Person {
+  id: ID!
+  firstName: String
+  lastName: String
+  gender: Gender
+  birthDate: String
+  deathDate: String
+  birthLocation: Location
+  deathLocation: Location
+  notes: String
+  createdBy: User
+  createdAt: String
+  parents: [Person!]!
+  children: [Person!]!
+  spouses: [Person!]!
+}
+
+type Relationship {
+  id: ID!
+  person: Person!
+  relatedPerson: Person!
+  type: RelationshipType!
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHER
+}
+
+enum RelationshipType {
+  PARENT
+  CHILD
+  SPOUSE
+}
+
+type Query {
+  persons: [Person!]!
+  person(id: ID!): Person
+  relationships(personId: ID!): [Relationship!]!
+}
+
+type Location {
+  id: ID!
+  name: String!
+  latitude: Float
+  longitude: Float
+}
+
+type Mutation {
+  createPerson(input: CreatePersonInput!): Person!
+  createRelationship(input: CreateRelationshipInput!): Relationship!
+}
+
+input CreatePersonInput {
+  firstName: String
+  lastName: String
+  gender: String
+  birthDate: String
+  deathDate: String
+  birthLocationId: ID
+  deathLocationId: ID
+  notes: String
+  createdBy: ID
+}
+
+input CreateRelationshipInput {
+  personId: ID!
+  relatedPersonId: ID!
+  type: RelationshipType!
+  notes: String
+}
