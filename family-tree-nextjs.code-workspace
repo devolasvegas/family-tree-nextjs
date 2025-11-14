@@ -1,0 +1,24 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    { "path": "apps/frontend" },
+    { "path": "apps/backend" },
+    { "path": "packages/shared" }
+  ],
+  "settings": {
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "eslint.workingDirectories": [
+      { "directory": "apps/frontend", "mode": "auto" },
+      { "directory": "apps/backend", "mode": "auto" },
+      { "directory": "packages/shared", "mode": "auto" }
+    ],
+    "editor.formatOnSave": true,
+    "files.exclude": {
+      "**/dist": true,
+      "**/node_modules": true
+    }
+  }
+}

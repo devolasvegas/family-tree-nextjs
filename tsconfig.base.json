@@ -6,7 +6,9 @@
     "baseUrl": ".",
     "paths": {
       "*": ["./*"],
-      "@shared/*": ["./packages/shared/*"]
+      "@shared/*": ["./packages/shared/*"],
+      "@frontend/*": ["./apps/frontend/*"],
+      "@backend/*": ["./apps/backend/*"]
     }
   }
 }
