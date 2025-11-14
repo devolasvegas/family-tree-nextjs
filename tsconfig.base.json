@@ -3,12 +3,18 @@
     "target": "ESNext",
     "strict": true,
     "esModuleInterop": true,
+    "ignoreDeprecations": "5.0",
     "baseUrl": ".",
     "paths": {
       "*": ["./*"],
       "@shared/*": ["./packages/shared/*"],
       "@frontend/*": ["./apps/frontend/*"],
-      "@backend/*": ["./apps/backend/*"]
+      "@backend/*": ["./apps/backend/*"],
+      "@components/*": ["./apps/frontend/components/*"],
+      "@providers/*": ["./apps/frontend/providers/*"],
+      "@public/*": ["./apps/frontend/public/*"],
+      "@lib/*": ["./apps/frontend/lib/*"],
+      "@hooks/*": ["./apps/frontend/hooks/*"]
     }
   }
 }

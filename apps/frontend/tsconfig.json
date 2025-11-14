@@ -16,17 +16,7 @@
       {
         "name": "next"
       }
-    ],
-    "ignoreDeprecations": "5.0",
-    "baseUrl": ".",
-    "paths": {
-      "*": ["./*"],
-      "@components/*": ["./components/*"],
-      "@providers/*": ["./providers/*"],
-      "@public/*": ["./public/*"],
-      "@lib/*": ["./lib/*"],
-      "@hooks/*": ["./hooks/*"]
-    }
+    ]
   },
   "include": [
     "next-env.d.ts",
