@@ -37,7 +37,7 @@ const AuthButton = () => {
       <Button
         variant={"secondary"}
         className="bg-inchworm"
-        onClick={() => signIn()}
+        onClick={() => signIn(undefined, { callbackUrl: "/dashboard" })}
       >
         Sign In
       </Button>

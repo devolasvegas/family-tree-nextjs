@@ -1,7 +1,7 @@
-import NextAuth from "next-auth";
+import NextAuth, { AuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
-const authOptions = {
+const authOptions: AuthOptions = {
   // Configure one or more authentication providers
   providers: [
     GoogleProvider({
@@ -9,6 +9,12 @@ const authOptions = {
       clientSecret: process.env.GOOGLE_OAUTH_CLIENT_SECRET as string,
     }),
   ],
+  callbacks: {
+    async signIn(args) {
+      console.log("Sign in attempt:", args);
+      return true;
+    },
+  },
 };
 
 const handler = NextAuth(authOptions);
