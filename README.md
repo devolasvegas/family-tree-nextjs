@@ -21,3 +21,7 @@ I decided that for now I would only use the Google OAuth provider. I went to my 
 ## Shadcn
 
 ## Apollo Server
+
+## Monorepo
+
+## Local Development
