@@ -24,6 +24,8 @@ I decided that for now I would only use the Google OAuth provider. I went to my 
 
 ## Monorepo
 
+- Had to create new Railway project after fully configuring monorepo so that Railway would pick up the deployment and configure it correctly. Otherwise our shared packages wouldn't build or be included in the project packages.
+
 ## Local Development
 
 ## Sharing Schema/Types/Codegen
