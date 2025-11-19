@@ -1,11 +1,12 @@
 {
   "folders": [
     {
-      "path": "."
+      "path": ".",
+      "name": "@familytree/monorepo"
     },
-    { "path": "apps/frontend" },
-    { "path": "apps/backend" },
-    { "path": "packages/shared" }
+    { "path": "apps/frontend", "name": "@familytree/frontend" },
+    { "path": "apps/backend", "name": "@familytree/backend" },
+    { "path": "packages/shared", "name": "@familytree/shared" }
   ],
   "settings": {
     "typescript.tsdk": "node_modules/typescript/lib",
