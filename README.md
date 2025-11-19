@@ -25,3 +25,5 @@ I decided that for now I would only use the Google OAuth provider. I went to my 
 ## Monorepo
 
 ## Local Development
+
+## Sharing Schema/Types/Codegen
