@@ -4,7 +4,7 @@ import { readFileSync } from "fs";
 
 import "dotenv/config";
 
-import resolvers from "@familytree/backend/src/schema/resolvers.js";
+import resolvers from "./apps/backend/src/schema/resolvers.js";
 
 const typeDefs = readFileSync("./src/schema/schema.graphql", {
   encoding: "utf-8",
