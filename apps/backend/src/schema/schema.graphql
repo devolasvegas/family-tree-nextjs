@@ -1,9 +1,11 @@
+"User represents an individual who can create and manage persons in the family tree."
 type User {
   id: ID!
   email: String!
   createdAt: String!
 }
 
+"Person represents an individual in a family tree."
 type Person {
   id: ID!
   firstName: String
