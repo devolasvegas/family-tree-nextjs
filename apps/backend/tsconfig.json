@@ -2,10 +2,10 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "target": "es2023",
-    "rootDirs": ["src"],
-    "outDir": "dist",
-    "lib": ["es2023"],
     "module": "nodenext",
+    "outDir": "dist",
+    "rootDir": "./src",
+    "lib": ["es2023"],
     "types": ["node"],
     "strict": false
   }
