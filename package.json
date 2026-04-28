@@ -1,7 +1,7 @@
 {
   "name": "@familytree/monorepo",
   "private": true,
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.33.2",
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
@@ -9,9 +9,9 @@
     "clean": "turbo clean"
   },
   "devDependencies": {
+    "eslint": "^9",
     "turbo": "^2.6.1",
-    "typescript": "^5.9.3",
-    "eslint": "^9"
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": "24.11.0"
