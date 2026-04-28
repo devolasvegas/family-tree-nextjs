@@ -4,7 +4,6 @@
     "strict": true,
     "esModuleInterop": true,
     "ignoreDeprecations": "5.0",
-    "baseUrl": ".",
     "paths": {
       "*": ["./*"],
       "@familytree/shared/*": ["./packages/shared/src/*"],
