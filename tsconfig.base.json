@@ -14,7 +14,8 @@
       "@providers/*": ["./apps/frontend/providers/*"],
       "@public/*": ["./apps/frontend/public/*"],
       "@lib/*": ["./apps/frontend/lib/*"],
-      "@hooks/*": ["./apps/frontend/hooks/*"]
+      "@hooks/*": ["./apps/frontend/hooks/*"],
+      "@generated/*": ["./apps/frontend/__generated__/*"]
     }
   }
 }
