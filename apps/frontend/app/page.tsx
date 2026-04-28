@@ -3,7 +3,7 @@ import { gql } from "@apollo/client";
 
 import { query } from "@lib/apolloClient";
 
-import { type Person } from "@generated/types";
+import { type Person } from "@generated/graphql";
 
 // Using force-dynamic so that our GraqhQL query doesn't run at build time
 // We want to use Railway private networking which is not available at build time
