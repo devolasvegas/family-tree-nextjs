@@ -1,6 +1,8 @@
 import { Pool } from "pg";
 const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 
+// TODO: Add types to this file
+
 const mapPersonRows = (row) => ({
   id: row.id,
   firstName: row.first_name,
@@ -42,7 +44,7 @@ const resolvers = {
          JOIN persons p ON p.birth_location_id = l.id
          WHERE p.id = $1
         `,
-        [person.id]
+        [person.id],
       );
 
       return rows[0];
@@ -54,7 +56,7 @@ const resolvers = {
          JOIN persons p ON p.death_location_id = l.id
          WHERE p.id = $1
         `,
-        [person.id]
+        [person.id],
       );
 
       return rows[0];
@@ -65,7 +67,7 @@ const resolvers = {
         `SELECT p.* FROM persons p
          JOIN relationships r ON p.id = r.related_person_id
          WHERE r.person_id = $1 AND r.type = 'parent'`,
-        [person.id]
+        [person.id],
       );
 
       return rows.map(mapPersonRows);
@@ -76,7 +78,7 @@ const resolvers = {
         `SELECT p.* FROM persons p
          JOIN relationships r ON p.id = r.related_person_id
          WHERE r.person_id = $1 AND r.type = 'child'`,
-        [person.id]
+        [person.id],
       );
 
       return rows.map(mapPersonRows);
@@ -87,7 +89,7 @@ const resolvers = {
         `SELECT p.* FROM persons p
          JOIN relationships r ON p.id = r.related_person_id
          WHERE r.person_id = $1 AND r.type = 'spouse'`,
-        [person.id]
+        [person.id],
       );
 
       return rows.map(mapPersonRows);
