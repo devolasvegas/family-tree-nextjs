@@ -38,7 +38,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <SessionWrapper>
-          <div className="mx-auto w-full max-w-5xl px-4">
+          <div className="mx-auto w-full max-w-7xl px-4">
             <div className="flex flex-row justify-between items-center">
               <Link href="/">
                 <Logo />
