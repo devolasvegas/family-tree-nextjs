@@ -16,24 +16,56 @@ type Person {
   birthLocation: Location
   deathLocation: Location
   notes: String
-  createdBy: User
+  createdBy: ID
   createdAt: String
-  parents: [Person!]!
-  children: [Person!]!
-  spouses: [Person!]!
+  parents: [ID!]
+  children: [ID!]
+  spouses: [ID!]
 }
 
 type Relationship {
   id: ID!
-  person: Person!
-  relatedPerson: Person!
+  person: ID!
+  relatedPerson: ID!
   type: RelationshipType!
+}
+
+type FamilyTree {
+  id: ID!
+  name: String!
+  description: String
+  createdBy: ID!
+  createdAt: String
+  members: [FamilyTreeMember]
+}
+
+type FamilyTreeMember {
+  id: String;
+  data: {
+    gender: String;
+    firstName: String;
+    lastName: String;
+    birthday: String;
+    death: String;
+    notes: String;
+  };
+  rels: {
+    parents: [String];
+    spouses: [String];
+    children: [String];
+  };
+}
+
+type Location {
+  id: ID!
+  name: String!
+  latitude: Float
+  longitude: Float
 }
 
 enum Gender {
   MALE
   FEMALE
-  OTHER
 }
 
 enum RelationshipType {
@@ -46,13 +78,7 @@ type Query {
   persons: [Person!]!
   person(id: ID!): Person
   relationships(personId: ID!): [Relationship!]!
-}
-
-type Location {
-  id: ID!
-  name: String!
-  latitude: Float
-  longitude: Float
+  familyTreesByUser(id: ID!): [FamilyTree!]!
 }
 
 type Mutation {
