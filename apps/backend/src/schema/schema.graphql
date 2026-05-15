@@ -40,20 +40,24 @@ type FamilyTree {
 }
 
 type FamilyTreeMember {
-  id: String;
-  data: {
-    gender: String;
-    firstName: String;
-    lastName: String;
-    birthday: String;
-    death: String;
-    notes: String;
-  };
-  rels: {
-    parents: [String];
-    spouses: [String];
-    children: [String];
-  };
+  id: String
+  data: FamilyTreeMemberData
+  rels: FamilyTreeRelationships
+}
+
+type FamilyTreeMemberData {
+  gender: String
+  firstName: String
+  lastName: String
+  birthday: String
+  death: String
+  notes: String
+}
+
+type FamilyTreeRelationships {
+  parents: [String]
+  spouses: [String]
+  children: [String]
 }
 
 type Location {
