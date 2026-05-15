@@ -39,7 +39,7 @@ export default function RootLayout({
       >
         <SessionWrapper>
           <div className="mx-auto w-full max-w-7xl px-4">
-            <div className="flex flex-row justify-between items-center">
+            <div className="flex flex-row justify-between items-center relative z-10">
               <Link href="/">
                 <Logo />
               </Link>
