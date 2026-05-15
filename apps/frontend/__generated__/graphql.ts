@@ -35,10 +35,43 @@ export type CreateRelationshipInput = {
   type: RelationshipType;
 };
 
+export type FamilyTree = {
+  __typename?: 'FamilyTree';
+  createdAt?: Maybe<Scalars['String']['output']>;
+  createdBy: Scalars['ID']['output'];
+  description?: Maybe<Scalars['String']['output']>;
+  id: Scalars['ID']['output'];
+  members?: Maybe<Array<Maybe<FamilyTreeMember>>>;
+  name: Scalars['String']['output'];
+};
+
+export type FamilyTreeMember = {
+  __typename?: 'FamilyTreeMember';
+  data?: Maybe<FamilyTreeMemberData>;
+  id?: Maybe<Scalars['String']['output']>;
+  rels?: Maybe<FamilyTreeRelationships>;
+};
+
+export type FamilyTreeMemberData = {
+  __typename?: 'FamilyTreeMemberData';
+  birthday?: Maybe<Scalars['String']['output']>;
+  death?: Maybe<Scalars['String']['output']>;
+  firstName?: Maybe<Scalars['String']['output']>;
+  gender?: Maybe<Scalars['String']['output']>;
+  lastName?: Maybe<Scalars['String']['output']>;
+  notes?: Maybe<Scalars['String']['output']>;
+};
+
+export type FamilyTreeRelationships = {
+  __typename?: 'FamilyTreeRelationships';
+  children?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  parents?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  spouses?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
 export enum Gender {
   Female = 'FEMALE',
-  Male = 'MALE',
-  Other = 'OTHER'
+  Male = 'MALE'
 }
 
 export type Location = {
@@ -70,9 +103,9 @@ export type Person = {
   __typename?: 'Person';
   birthDate?: Maybe<Scalars['String']['output']>;
   birthLocation?: Maybe<Location>;
-  children: Array<Person>;
+  children?: Maybe<Array<Scalars['ID']['output']>>;
   createdAt?: Maybe<Scalars['String']['output']>;
-  createdBy?: Maybe<User>;
+  createdBy?: Maybe<Scalars['ID']['output']>;
   deathDate?: Maybe<Scalars['String']['output']>;
   deathLocation?: Maybe<Location>;
   firstName?: Maybe<Scalars['String']['output']>;
@@ -80,15 +113,21 @@ export type Person = {
   id: Scalars['ID']['output'];
   lastName?: Maybe<Scalars['String']['output']>;
   notes?: Maybe<Scalars['String']['output']>;
-  parents: Array<Person>;
-  spouses: Array<Person>;
+  parents?: Maybe<Array<Scalars['ID']['output']>>;
+  spouses?: Maybe<Array<Scalars['ID']['output']>>;
 };
 
 export type Query = {
   __typename?: 'Query';
+  familyTreesByUser: Array<FamilyTree>;
   person?: Maybe<Person>;
   persons: Array<Person>;
   relationships: Array<Relationship>;
+};
+
+
+export type QueryFamilyTreesByUserArgs = {
+  id: Scalars['ID']['input'];
 };
 
 
@@ -104,8 +143,8 @@ export type QueryRelationshipsArgs = {
 export type Relationship = {
   __typename?: 'Relationship';
   id: Scalars['ID']['output'];
-  person: Person;
-  relatedPerson: Person;
+  person: Scalars['ID']['output'];
+  relatedPerson: Scalars['ID']['output'];
   type: RelationshipType;
 };
 
