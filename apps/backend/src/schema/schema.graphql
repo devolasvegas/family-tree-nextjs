@@ -88,6 +88,13 @@ type Query {
 type Mutation {
   createPerson(input: CreatePersonInput!): Person!
   createRelationship(input: CreateRelationshipInput!): Relationship!
+  createFamilyTree(input: CreateFamilyTreeInput!): FamilyTree!
+}
+
+input CreateFamilyTreeInput {
+  name: String!
+  description: String
+  createdBy: ID!
 }
 
 input CreatePersonInput {
